@@ -4,35 +4,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>COVA.AIX - Berita AI</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
+    <img src="assets/logo.png" alt="Logo" class="logo" />
     <h1>COVA.AIX</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="ekonomi.html">Ekonomi</a>
-      <a href="teknologi.html">Teknologi</a>
-      <a href="olahraga.html">Olahraga</a>
-      <a href="internasional.html">Internasional</a>
+      <a href="#ekonomi">Ekonomi</a>
+      <a href="#teknologi">Teknologi</a>
+      <a href="#olahraga">Olahraga</a>
+      <a href="#internasional">Internasional</a>
+      <a href="#politik">Politik</a>
+      <a href="#kripto">Kripto</a>
+      <a href="#startup">Startup</a>
+      <a href="#otomotif">Otomotif</a>
     </nav>
   </header>  <main>
     <section class="scroll-horizontal">
-      <article>
-        <h2>Berita Utama</h2>
+      <article onclick="bukaBerita('AI Indonesia berkembang pesat tahun 2025...', 'AI dipakai di sekolah, rumah sakit, dan transportasi. Revolusi dimulai.')">
+        <h2>AI 2025</h2>
         <p>AI Indonesia berkembang pesat tahun 2025...</p>
       </article>
-      <article>
+      <article onclick="bukaBerita('Startup AI Lokal', 'Pendanaan besar didapatkan oleh startup AI bidang kesehatan dan keamanan.')">
         <h2>Ekonomi Digital</h2>
         <p>Startup AI lokal mendapat pendanaan besar...</p>
       </article>
-      <!-- Tambah lebih banyak artikel -->
+      <!-- Tambah artikel lainnya sesuai kebutuhan -->
     </section><section>
   <h2>Berita Terbaru</h2>
   <div class="berita-list">
-    <div class="berita">Berita 1...</div>
-    <div class="berita">Berita 2...</div>
-    <div class="berita">Berita 3...</div>
-    <!-- dst -->
+    <div class="berita" onclick="bukaBerita('Trump Terkini', 'Donald Trump menghadapi masalah hukum baru yang berdampak pada pemilu.')">
+      <h3>Trump Terkini</h3>
+      <p>Masalah hukum terus bertambah...</p>
+    </div>
+    <div class="berita" onclick="bukaBerita('Bitcoin Naik Tajam', 'Harga Bitcoin menembus $100K pertama kali dalam sejarah.')">
+      <h3>Bitcoin Naik Tajam</h3>
+      <p>Pasar kripto melonjak drastis...</p>
+    </div>
+    <!-- Tambah berita lain -->
   </div>
 </section>
 
