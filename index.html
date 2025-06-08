@@ -1,54 +1,77 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COVA.AIX - Berita AI</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>COVA.AIX - Berita Terkini dan Eksklusif</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <h1>COVA.AIX</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#ekonomi">Ekonomi</a>
-      <a href="#teknologi">Teknologi</a>
-      <a href="#olahraga">Olahraga</a>
-      <a href="#internasional">Internasional</a>
-      <a href="#politik">Politik</a>
-      <a href="#kripto">Kripto</a>
-      <a href="#startup">Startup</a>
-      <a href="#otomotif">Otomotif</a>
-    </nav>
-  </header>  <main>
-    <section class="scroll-horizontal">
-      <article onclick="bukaBerita('AI Indonesia berkembang pesat tahun 2025...', 'AI dipakai di sekolah, rumah sakit, dan transportasi. Revolusi dimulai.')">
-        <h2>AI 2025</h2>
-        <p>AI Indonesia berkembang pesat tahun 2025...</p>
-      </article>
-      <article onclick="bukaBerita('Startup AI Lokal', 'Pendanaan besar didapatkan oleh startup AI bidang kesehatan dan keamanan.')">
-        <h2>Ekonomi Digital</h2>
-        <p>Startup AI lokal mendapat pendanaan besar...</p>
-      </article>
-      <!-- Tambah artikel lainnya sesuai kebutuhan -->
-    </section><section>
-  <h2>Berita Terbaru</h2>
-  <div class="berita-list">
-    <div class="berita" onclick="bukaBerita('Trump Terkini', 'Donald Trump menghadapi masalah hukum baru yang berdampak pada pemilu.')">
-      <h3>Trump Terkini</h3>
-      <p>Masalah hukum terus bertambah...</p>
-    </div>
-    <div class="berita" onclick="bukaBerita('Bitcoin Naik Tajam', 'Harga Bitcoin menembus $100K pertama kali dalam sejarah.')">
-      <h3>Bitcoin Naik Tajam</h3>
-      <p>Pasar kripto melonjak drastis...</p>
-    </div>
-    <!-- Tambah berita lain -->
+<header>
+  <div class="logo">COVA.AIX</div>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Beranda</a></li>
+      <li><a href="kategori/bisnis.html">Bisnis</a></li>
+      <li><a href="kategori/teknologi.html">Teknologi</a></li>
+      <li><a href="kategori/kesehatan.html">Kesehatan</a></li>
+      <li><a href="kategori/olahraga.html">Olahraga</a></li>
+      <li><a href="kategori/hiburan.html">Hiburan</a></li>
+      <li><a href="kategori/sains.html">Sains</a></li>
+      <li><a href="kategori/politik.html">Politik</a></li>
+      <li><a href="kategori/ekonomi.html">Ekonomi</a></li>
+      <li><a href="kategori/budaya.html">Budaya</a></li>
+      <li><a href="kategori/otomotif.html">Otomotif</a></li>
+      <li><a href="kategori/game.html">Game</a></li>
+      <li><a href="kategori/gaya-hidup.html">Gaya Hidup</a></li>
+      <li><a href="kategori/dunia.html">Dunia</a></li>
+      <li><a href="kategori/pendidikan.html">Pendidikan</a></li>
+    </ul>
+  </nav>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Cari berita..." />
   </div>
-</section>
+</header>
 
-  </main>  <footer>
-    <p>© 2025 COVA.AIX | <a href="#">Tentang</a> | <a href="#">Kontak</a> | <a href="#">Donasi</a></p>
-  </footer>
+<main>
+  <section class="featured-news">
+    <article>
+      <img src="images/featured1.jpg" alt="Berita Unggulan 1" />
+      <h2>Inovasi AI Mengubah Dunia</h2>
+      <p>Penjelasan singkat berita terbaru mengenai perkembangan teknologi AI.</p>
+      <a href="berita.html?id=1">Baca Selengkapnya</a>
+    </article>
+    <article>
+      <img src="images/featured2.jpg" alt="Berita Unggulan 2" />
+      <h2>Ekonomi Global Tumbuh Pesat</h2>
+      <p>Analisis terbaru tentang pertumbuhan ekonomi dunia tahun ini.</p>
+      <a href="berita.html?id=2">Baca Selengkapnya</a>
+    </article>
+  </section>
+
+  <section class="latest-news" id="newsList">
+    <h3>Berita Terbaru</h3>
+    <article>
+      <h4>Teknologi 5G Semakin Merata</h4>
+      <p>5G kini telah menjangkau lebih banyak daerah di dunia.</p>
+      <a href="berita.html?id=3">Baca Selengkapnya</a>
+    </article>
+    <article>
+      <h4>Tim Sepakbola Nasional Raih Kemenangan</h4>
+      <p>Kemenangan penting dalam pertandingan internasional.</p>
+      <a href="berita.html?id=4">Baca Selengkapnya</a>
+    </article>
+    <!-- Tambah artikel lain -->
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 COVA.AIX - Semua hak cipta dilindungi</p>
+  <nav>
+    <a href="tentang.html">Tentang</a> | <a href="donasi.html">Donasi</a> | <a href="kontak.html">Kontak</a>
+  </nav>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
