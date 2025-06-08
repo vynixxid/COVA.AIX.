@@ -1,36 +1,18 @@
-// script.js
+const searchInput = document.getElementById('searchInput');
+const newsList = document.getElementById('newsList');
+const articles = newsList.getElementsByTagName('article');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('searchInput');
-  const newsList = document.getElementById('newsList');
-  const articles = newsList ? Array.from(newsList.getElementsByTagName('article')) : [];
+searchInput.addEventListener('input', function () {
+  const filter = this.value.toLowerCase();
 
-  if (searchInput) {
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
+  Array.from(articles).forEach(article => {
+    const title = article.querySelector('h4')?.textContent.toLowerCase() || '';
+    const desc = article.querySelector('p')?.textContent.toLowerCase() || '';
 
-      articles.forEach(article => {
-        const title = article.querySelector('h3').textContent.toLowerCase();
-        const desc = article.querySelector('p').textContent.toLowerCase();
-
-        if (title.includes(query) || desc.includes(query)) {
-          article.style.display = '';
-        } else {
-          article.style.display = 'none';
-        }
-      });
-    });
-  }
-
-  // Contoh navigasi aktif dinamis (opsional)
-  const navLinks = document.querySelectorAll('nav ul.nav-menu li a');
-  const currentPath = window.location.pathname.split('/').pop();
-
-  navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
+    if (title.includes(filter) || desc.includes(filter)) {
+      article.style.display = '';
     } else {
-      link.classList.remove('active');
+      article.style.display = 'none';
     }
   });
 });
